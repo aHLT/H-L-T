@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <!--让bootstrap兼容最新版本的IE.-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable= no"/>
+    <!--         视窗                宽=设备宽度             缩放=1    最大缩放=1，禁止用户缩放-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <!--以移动设备优先-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet/less" href="less/style.less"/>
+</head>
+<body>
+<div class="carousel" id="banner">
+        <!--旋转木马-->
+    <div class="carousel-inner">
+              <!--旋转木马内部-->
+        <div class="item active">
+                  <!--一项  选中-->
+            <img src="image/banner.jpg" alt=""/>
+            <div class="carousel-caption">
+                旋转木马一项的标题
+            </div>
+                       <!--旋转木马标题-->
+        </div>
+        <div class="item">
+            <img src="image/banner1.jpg" alt=""/>
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+            <img src="image/banner.jpg" alt=""/>
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+            <img src="image/banner1.jpg" alt=""/>
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+            <img src="image/banner.jpg" alt=""/>
+            <div class="carousel-caption"></div>
+        </div>
+    </div>
+    <ol class="carousel-indicators">
+             <!--旋转木马指示物-->
+        <li data-target="#banner" data-slide-to="0" class="active"></li>
+              <!--绑定目标             绑定木马的第一个 0      选中-->
+        <li data-target="#banner" data-slide-to="1"></li>
+        <li data-target="#banner" data-slide-to="2"></li>
+        <li data-target="#banner" data-slide-to="3"></li>
+        <li data-target="#banner" data-slide-to="4"></li>
+    </ol>
+    <a href="#banner" data-slide="prev" class="carousel-control left">
+    <!--跳转目标#banner 绑定幻灯片:上一个       旋转木马管理    左-->
+        <i class="glyphicon glyphicon-chevron-left"></i>
+                 <!--图标             V形徽章左-->
+    </a>
+    <a href="#banner" data-slide="next" class="carousel-control right">
+    <!--跳转目标#banner 绑定幻灯片:下一个       旋转木马管理    右-->
+        <i class="glyphicon glyphicon-chevron-right"></i>
+                  <!--图标             V形徽章右-->
+    </a>
+</div>
+
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/less.min.js"></script>
+<!--如果 小于 ie9-->
+<!--[if lt ie 9]>
+<script>
+window.onload = function () {
+//        页面加载完成
+var aBody = document.getElementsByTagName('body') [0];
+//        创建元素 aBody 是 文档中的所有标签是body的第一个元素
+aBody.innerHTML = '你的浏览器版本太低，请到此处升级' +
+'<a href="">点击此处升级</a>'
+}
+</script>
+<![endif]-->
+<!--结束如果-->
+<script>
+    $(function () {
+        $('#banner').carousel({
+            interval : 3000
+        })
+    })
+</script>
+</body>
+</html>
